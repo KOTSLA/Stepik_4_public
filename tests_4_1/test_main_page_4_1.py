@@ -2,12 +2,13 @@ import time
 import requests
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from tests.locators import ProductPageLocators
+from locators import ProductPageLocators
 from selenium.common.exceptions import NoSuchElementException
+
 
 url = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/"
 
-class BasePage():
+class MainPage():
     def __init__(self, url, browser):
         self.url = url
         self.browser = browser
@@ -93,7 +94,7 @@ def test_language(language):
     print(f"Running test with language: {language}")
 
 def test_add_to_cart(browser):
-    page = BasePage(url, browser=browser)
+    page = MainPage(url, browser=browser)
     page.open()
     page.should_be_add_to_cart_button()
     page.add_product_to_cart()
