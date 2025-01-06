@@ -9,7 +9,7 @@ class BasePage():
     def open(self):
         self.browser.get(self.url)
 
-    # is_element_present, в котором будем перехватывать исключение. В него будем передавать два аргумента: как искать (css, id, xpath и тд) и собственно что искать (строку-селектор).
+    # is_element_present, method
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
