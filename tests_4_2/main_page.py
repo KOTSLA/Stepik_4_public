@@ -3,7 +3,7 @@ import time
 from tests_4_2.locators_4_2 import MainPageLocators
 
 from tests_4_2.base_page import BasePage
-from tests_4_2.login_page import LoginPage
+
 
 class MainPage(BasePage):
     def should_be_login_link(self):
